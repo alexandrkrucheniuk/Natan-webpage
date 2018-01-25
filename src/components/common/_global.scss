@@ -9,7 +9,7 @@ body {
 body {
     color: black;
     background: white;
-    font:16px $font-family-primary;
+    font: 16px $font-family-primary;
 
     @include respond-to(phone) {
         font-size: 14px;
@@ -33,6 +33,7 @@ img {
     align-content: stretch;
 
     padding: $gutter*3 $gutter*3.5;
+    
     @include respond-to(not-desktop) {
         padding: $gutter*2 $gutter/1.8;
     }
@@ -47,5 +48,17 @@ img {
         margin-top: $gutter/2;
         margin-bottom: 35px;
 
+    }
+}
+
+.show {
+    &-not {
+        &_desktop {
+            display: none;
+
+            @include respond-to(not-desktop) {
+                display: block;
+            }
+        }
     }
 }
