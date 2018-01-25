@@ -10,9 +10,12 @@
     }
     &-social {
       margin-top: $gutter;
-
       font-size: 14px;
       font-weight: 700;
+
+      @include respond-to(not-desktop){
+        margin-top: $gutter/2;
+      }
 
       a {
         text-decoration: none;
@@ -46,5 +49,9 @@
     font-size: 14px;
     font-weight: 700;
 
+
+    @include respond-to(not-desktop){
+      align-items: flex-end;
+    }
   }
 }
