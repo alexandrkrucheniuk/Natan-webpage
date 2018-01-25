@@ -13,9 +13,17 @@
         font-family: $font-family-primary;
         font-size: 24px;
         font-weight: 700;
-        
+
+        @include respond-to(laptop) {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
         @include respond-to(desktop) {
-            flex: 0 0 33.33%;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
         }
     }
 }

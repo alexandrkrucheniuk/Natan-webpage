@@ -19,23 +19,11 @@
         box-sizing: border-box;
     }
 
-    @include respond-to(desktop) {
-        flex: 0 0 33.33%;
-    }
-
     &_right {
         text-align: right;
 
         @include respond-to(not-desktop) {
             display: none;
-        }
-
-        @include respond-to(laptop) {
-            flex: 0 0 33.33%;
-        }
-
-        @include respond-to(desktop) {
-            flex: 0 0 33.33%;
         }
     }
 
@@ -48,7 +36,7 @@
         line-height: 1.55;
 
         &:not(:last-child) {
-            padding-right: 15px;
+            padding-right: 20px;
         }
 
         @include respond-to(not-desktop) {
