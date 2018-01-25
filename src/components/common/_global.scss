@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+}
+html,
+body {
+    height: 100%;
+}
+
+body {
+    color: black;
+    background: white;
+    font:16px $font-family-primary;
+
+    @include respond-to(phone) {
+        font-size: 14px;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    max-width: $desktop;
+    margin: auto;
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    align-content: stretch;
+
+    padding: $gutter*3 $gutter*3.5;
+    @include respond-to(not-desktop) {
+        padding: 0 $gutter/2;
+    }
+}
+
+.content {
+    &__container {
+
+        padding: 25px;
+        box-shadow: 0 0 5px 1px rgba(37, 37, 37, 0.05);
+        background-color: white;
+        margin-top: $gutter/2;
+        margin-bottom: 35px;
+
+    }
+}
