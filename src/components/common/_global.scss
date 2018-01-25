@@ -29,13 +29,14 @@ img {
     flex-direction: column;
     justify-content: space-between;
     align-items: stretch;
+    height: 100%;
     align-content: stretch;
 
     padding: $gutter*3 $gutter*3.5;
-
-    // @include respond-to(not-desktop) {
-    //     padding: 0 $gutter/2;
-    // }
+    
+    @include respond-to(not-desktop) {
+        padding: $gutter*2 $gutter/1.8;
+    }
 }
 
 .content {
