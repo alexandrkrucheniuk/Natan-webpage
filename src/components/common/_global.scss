@@ -33,7 +33,7 @@ img {
 
     padding: $gutter*3 $gutter*3.5;
     @include respond-to(not-desktop) {
-        padding: 0 $gutter/2;
+        padding: $gutter*2 $gutter/1.8;
     }
 }
 
