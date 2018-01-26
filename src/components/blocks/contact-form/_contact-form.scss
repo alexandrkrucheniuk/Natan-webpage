@@ -10,7 +10,7 @@
         &-wrapper {
             padding: 50px;
             background-color: #fff;
-            margin: 0 auto;
+            margin: auto;
 
             @include respond-to(phone) {
                 width: 100%;
