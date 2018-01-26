@@ -5,15 +5,20 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        font-family: $font-family-primary;
+        font-family: $font-family-roboto;
 
         &-wrapper {
             padding: 50px;
             background-color: #fff;
             margin: auto;
 
+            @include respond-to(not-desktop){
+                padding: 30px;
+            }
+
             @include respond-to(phone) {
                 width: 100%;
+                padding: 20px;
             }
 
         }
@@ -76,7 +81,7 @@
             height: 46px;
             text-transform: uppercase;
             margin-top: 50px;
-            font-family: 'PT Sans';
+            font-family: $font-family-PTsans;
             color: #343434;
             font-size: 15px;
             font-weight: 700;
@@ -94,7 +99,7 @@
 
     &__info {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         margin-top: 50px;
 
         @include respond-to(phone) {
@@ -112,8 +117,7 @@
             font-size: 14px;
 
             &:first-child {
-                margin-right: 75px;
-
+                margin-right: 10px;
                 @include respond-to(phone) {
                     @media (orientation: portrait) {
                         margin-right: 0;

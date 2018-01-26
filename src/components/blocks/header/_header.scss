@@ -1,5 +1,5 @@
 .header {
-    font-family: $font-family-secondary;
+    font-family: $font-family-playfair;
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -10,7 +10,7 @@
         text-align: center;
         color: #000;
         text-decoration: none;
-        font-family: $font-family-primary;
+        font-family: $font-family-roboto;
         font-size: 24px;
         font-weight: 700;
 

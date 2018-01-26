@@ -30,7 +30,7 @@
 
     &__item {
         text-decoration: none;
-        font-family: $font-family-primary;
+        font-family: $font-family-roboto;
         color: #000;
         font-size: 14px;
         font-weight: 700;
@@ -48,7 +48,7 @@
             color: #fff;
             padding: $gutter / 4 0;
             line-height: 50px;
-            font-family: 'Roboto';
+            font-family: $font-family-roboto;
             font-weight: 500;
         }
     }
@@ -63,6 +63,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        cursor: pointer;
 
         &-stripe {
             display: block;
@@ -99,11 +100,12 @@
         top: 15px;
         left: 50%;
         transform: translateX(-50%);        
-        font-family: 'Roboto';
+        font-family: $font-family-roboto;
         color: #fff;
         font-size: 50px;
         font-weight: 100;
         line-height: 50px;
+        cursor: pointer;
 
         @include respond-to(phone) {
             @media (orientation: landscape) {
