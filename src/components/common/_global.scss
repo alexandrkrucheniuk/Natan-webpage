@@ -9,7 +9,7 @@ body {
 body {
     color: black;
     background: white;
-    font: 16px $font-family-primary;
+    font: 16px $font-family-roboto;
 
     @include respond-to(phone) {
         font-size: 14px;
