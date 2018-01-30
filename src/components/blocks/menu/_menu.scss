@@ -57,7 +57,7 @@
         width: 40px;
         height: 40px;
         margin-right: 20px;
-        border: 1px solid #000;
+        border: 1px solid #e8e8e8;
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
@@ -67,12 +67,12 @@
 
         &-stripe {
             display: block;
-            background-color: #000;
+            background-color: #343434;
             width: 20px;
             height: 3px;
 
             &:not(:last-child) {
-                margin-bottom: 5px;
+                margin-bottom: 2px;
             }
         }
 
