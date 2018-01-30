@@ -54,8 +54,8 @@
     }
 
     &__burger {
-        width: 40px;
-        height: 40px;
+        width: 50px;
+        height: 50px;
         margin-right: 20px;
         border: 1px solid #e8e8e8;
         box-sizing: border-box;
@@ -68,11 +68,11 @@
         &-stripe {
             display: block;
             background-color: #343434;
-            width: 20px;
-            height: 3px;
+            width: 30px;
+            height: 2px;
 
             &:not(:last-child) {
-                margin-bottom: 2px;
+                margin-bottom: 3px;
             }
         }
 
