@@ -1,0 +1,34 @@
+<div class="viewwork">
+    <div class="viewwork-left">
+        <div class="viewwork-left__fullview--trigger">
+            Full view
+        </div>
+        <div class="viewwork-left__fullview" style="display: none;">
+            <div class="viewwork-left__fullview--image">
+
+            </div>
+            <div class="viewwork-left__fullview--close">
+                Close
+            </div>
+        </div>
+        <div class="viewwork-left-description">
+            <div class="viewwork-left-description__title">Title example</div>
+            <div class="viewwork-left-description__text">Preserved defective offending he daughters on or. Rejoiced
+                prospect yet material servants out answered men admitted. Sportsmen certainty prevailed suspected am as.
+                Add stairs admire all answer the nearer yet length.
+            </div>
+        </div>
+    </div>
+    <div class="viewwork-right"></div>
+</div>
+<script>
+    document.querySelector('.viewwork-left__fullview--trigger').addEventListener("click", function (e) {
+        document.querySelector('.viewwork-left__fullview').style.display = document.querySelector('.viewwork-left__fullview').style.display !== 'none' ? 'none' : 'flex';
+        document.querySelector('.viewwork-left__fullview--image').style.backgroundImage = getComputedStyle(e.target.parentNode, null).backgroundImage;
+        document.querySelector('.viewwork-left__fullview').addEventListener('click', function (e) {
+            if (e.target.className !== 'viewwork-left__fullview--image') {
+                document.querySelector('.viewwork-left__fullview').style.display = "none";
+            }
+        });
+    });
+</script>
