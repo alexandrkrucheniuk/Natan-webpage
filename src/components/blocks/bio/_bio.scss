@@ -6,16 +6,21 @@
     margin-bottom: 60px;
     border-top: 1px solid #e8e8e8;
     border-bottom: 1px solid #e8e8e8;
+    font-family: $font-family-playfair;
+    color: #343434;
+
+    @include respond-to(not-desktop) {
+        padding-bottom: 100px;
+    }
 
     [class*="_left"],
     [class*="_right"] {
         width: 50%;
-        // border: 1px solid rgba($color: blue, $alpha: .1);
+
+        @include respond-to(phone) {
+            width: 100%;
+        }
     }
-
-    font-family: $font-family-playfair;
-    color: #343434;
-
 
     &__title {
         font-size: 50px;
@@ -23,6 +28,11 @@
         line-height: 35px;
         width: 380px;
         margin-top: 92px;
+
+        @include respond-to(phone) {
+            width: 100%;
+            margin-top: 10px;
+        }
     }
 
     &__item {
@@ -30,21 +40,33 @@
         width: 100%;
         display: flex;
         margin-bottom: 200px;
-
         font-size: 14px;
         font-weight: 700;
         line-height: 26px;
+
+        @include respond-to(phone) {
+            flex-direction: column;
+            margin-bottom: 0;
+        }
 
         &_left {
             display: flex;
             justify-content: flex-end;
             padding-right: 115px;
+
+            @include respond-to(phone) {
+                padding-right: 0;
+            }
         }
 
         &-text {
             width: 380px;
             margin-bottom: 28px;
             margin-top: 0;
+
+            @include respond-to(phone) {
+                width: 100%;
+            }
         }
     }
 
@@ -52,6 +74,10 @@
     &__second &__item_right,
     &__third &__item_right {
         padding-left: $right-side-padding-left;
+
+        @include respond-to(phone) {
+            padding-left: 0;
+        }
     }
 
     &__intro {
@@ -59,6 +85,11 @@
             background: url("/images/bio-intro.png") no-repeat center;
             width: 470px;
             height: 502px;
+
+            @include respond-to(phone) {
+                width: calc(100% + 15px);
+                margin-top: 45px;
+            }
         }
 
         .bio__item_left {
@@ -66,6 +97,10 @@
             justify-content: flex-start;
             align-items: flex-end;
             padding-right: 115px;
+
+            @include respond-to(phone) {
+                padding-right: 0;
+            }
         }
     }
     
@@ -74,19 +109,38 @@
             background: url("/images/bio-second.png") no-repeat center;
             width: 670px;
             height: 502px;
+
+            @include respond-to(phone) {
+                display: none;
+            }
         }
 
         .bio__item_right {
             padding-top: 100px;
+
+            @include respond-to(not-desktop) {
+                padding-top: 60px;
+            }
         }
     }
 
     &__third {
         margin-bottom: 0;
+
+        @include respond-to(not-desktop) {
+            margin-top: 55px;
+            padding-left: 45px;
+
+            .bio__item-text {
+                line-height: 26px;
+                max-width: 380px;
+            }
+        }
     }
 
     &__quote {
-        width: 1150px;
+        max-width: 1150px;
+        width: 100%;
         margin: 0 auto;
         display: flex;
         flex-direction: column;
@@ -94,10 +148,25 @@
         padding-left: 63px;
         margin-bottom: 190px;
 
+        @include respond-to(phone) {
+            padding-left: 45px;
+            margin-bottom: 70px;
+        }
+
         &-title {
             font-size: 30px;
             font-weight: 400;
             line-height: 50px;
+
+            @include respond-to(not-desktop) {
+                margin-top: -2px;
+            }
+        }
+
+        &-note {
+            @include respond-to(not-desktop) {
+                line-height: 24px;
+            }
         }
 
         &:before {
@@ -109,15 +178,30 @@
             width: 178px;
             height: 165px;
             background: url("/images/bio-quote.png") no-repeat center;
+
+            @include respond-to(phone) {
+                top: -129px;
+                left: -17px;
+            }
         }
     }
 
     &__fourth {
+        @include respond-to(phone) {
+            flex-direction: column-reverse;
+        }
+
         &-poster {
             background: url("/images/bio-fourth.png") no-repeat center;
             width: 670px;
             height: 502px;
             margin-left: 15px;
+
+            @include respond-to(phone) {
+                margin-left: -15px;
+                margin-right: -15px;
+                width: calc(100% + 30px);
+            }
         }
 
         .bio__item_left {
@@ -126,31 +210,57 @@
             justify-content: flex-start;
             align-items: flex-end;
             padding-right: 315px;
+
+            @include respond-to(phone) {
+                padding-right: 0;
+                margin-top: 65px;
+            }
         }
 
         .bio__item-text {
-            width: 470px;
+            max-width: 470px;
+            width: 100%;
         }
     }
 
     &__fifth {
         margin-bottom: 100px;
 
+        @include respond-to(not-desktop) {
+            margin-bottom: 30px;
+        }
+
         &-poster {
             background: url("/images/bio-fifth.png") no-repeat center;
             width: 670px;
             height: 502px;
+
+            @include respond-to(phone) {
+                background-position-x: right;
+                margin: 40px -15px 10px;
+                width: calc(100% + 30px);
+            }
         }
 
         .bio__item_right {
             margin-top: 20px;
             padding-left: 60px;
 
+            @include respond-to(phone) {
+                padding-left: 0;
+            }
+
             .bio__item-text {
                 &:last-child {
                     width: 380px;
                     margin-top: 90px;
                     margin-left: 293px;
+
+                    @include respond-to(phone) {
+                        margin-left: 0;
+                        margin-top: 40px;
+                        width: 100%;
+                    }
                 }
             }
         }
