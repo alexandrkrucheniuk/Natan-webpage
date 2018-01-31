@@ -1,0 +1,189 @@
+.bio {
+    $right-side-padding-left: 115px;
+    margin-top: 60px;
+    padding-top: 70px;
+    padding-bottom: 120px;
+    margin-bottom: 60px;
+    border-top: 1px solid #e8e8e8;
+    border-bottom: 1px solid #e8e8e8;
+
+    [class*="_left"],
+    [class*="_right"] {
+        width: 50%;
+        // border: 1px solid rgba($color: blue, $alpha: .1);
+    }
+
+    font-family: $font-family-playfair;
+    color: #343434;
+
+
+    &__title {
+        font-size: 50px;
+        font-weight: 400;
+        line-height: 35px;
+        width: 380px;
+        margin-top: 92px;
+    }
+
+    &__item {
+        min-height: 100px;
+        width: 100%;
+        display: flex;
+        margin-bottom: 200px;
+
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 26px;
+
+        &_left {
+            display: flex;
+            justify-content: flex-end;
+            padding-right: 115px;
+        }
+
+        &-text {
+            width: 380px;
+            margin-bottom: 28px;
+            margin-top: 0;
+        }
+    }
+
+    &__intro &__item_right,
+    &__second &__item_right,
+    &__third &__item_right {
+        padding-left: $right-side-padding-left;
+    }
+
+    &__intro {
+        &-poster {
+            background: url("/images/bio-intro.png") no-repeat center;
+            width: 470px;
+            height: 502px;
+        }
+
+        .bio__item_left {
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-end;
+            padding-right: 115px;
+        }
+    }
+    
+    &__second {
+        &-poster {
+            background: url("/images/bio-second.png") no-repeat center;
+            width: 670px;
+            height: 502px;
+        }
+
+        .bio__item_right {
+            padding-top: 100px;
+        }
+    }
+
+    &__third {
+        margin-bottom: 0;
+    }
+
+    &__quote {
+        width: 1150px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        padding-left: 63px;
+        margin-bottom: 190px;
+
+        &-title {
+            font-size: 30px;
+            font-weight: 400;
+            line-height: 50px;
+        }
+
+        &:before {
+            display: block;
+            content: "";
+            position: absolute;
+            top: -98px;
+            left: 0;
+            width: 178px;
+            height: 165px;
+            background: url("/images/bio-quote.png") no-repeat center;
+        }
+    }
+
+    &__fourth {
+        &-poster {
+            background: url("/images/bio-fourth.png") no-repeat center;
+            width: 670px;
+            height: 502px;
+            margin-left: 15px;
+        }
+
+        .bio__item_left {
+            margin-top: 80px;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-end;
+            padding-right: 315px;
+        }
+
+        .bio__item-text {
+            width: 470px;
+        }
+    }
+
+    &__fifth {
+        margin-bottom: 100px;
+
+        &-poster {
+            background: url("/images/bio-fifth.png") no-repeat center;
+            width: 670px;
+            height: 502px;
+        }
+
+        .bio__item_right {
+            margin-top: 20px;
+            padding-left: 60px;
+
+            .bio__item-text {
+                &:last-child {
+                    width: 380px;
+                    margin-top: 90px;
+                    margin-left: 293px;
+                }
+            }
+        }
+    }
+
+    &__commission {
+        max-width: 970px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        &-title {
+            font-size: 30px;
+            font-weight: 400;
+            line-height: 50px;
+            text-align: center;
+        }
+
+        &-link {
+            font-family: "ProximaNova";
+            color: #1396e9;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 22px;
+            text-align: center;
+            text-decoration: none;
+            width: 100px;
+
+            &:hover,
+            &:focus {
+                text-decoration: underline;
+            }
+        }
+    }
+}
