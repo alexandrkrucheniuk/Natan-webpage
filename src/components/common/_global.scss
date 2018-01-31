@@ -8,7 +8,7 @@ body {
 
 body {
     color: black;
-    background: white;
+    background: #fcfcfc;
     font: 16px $font-family-roboto;
 
     @include respond-to(phone) {
@@ -31,23 +31,29 @@ img {
     align-items: stretch;
     height: 100%;
     align-content: stretch;
-
     padding: $gutter*3 $gutter*3.5;
+    
+    @include respond-to(not-desktop) {
+        padding: $gutter*2 $gutter*0.75;
+    }
 
     &_fix {
         max-width: $desktop;
         padding: 40px 0; 
         margin: 0 auto;
-    }
-    
-    @include respond-to(not-desktop) {
-        padding: $gutter*2 $gutter*0.75;
+
+        @include respond-to(not-desktop) {
+            padding: 40px 15px 45px;
+        }
+        
+        @include respond-to(laptop) {
+            padding: 40px 15px 45px;
+        }
     }
 }
 
 .content {
     &__container {
-
         padding: 25px;
         box-shadow: 0 0 5px 1px rgba(37, 37, 37, 0.05);
         background-color: white;
