@@ -32,6 +32,10 @@ img {
     height: 100%;
     align-content: stretch;
     padding: $gutter*3 $gutter*3.5;
+
+    @include respond-to(phone) {
+        height: 130px;
+    }
     
     @include respond-to(not-desktop) {
         padding: $gutter*2 $gutter*0.75;
