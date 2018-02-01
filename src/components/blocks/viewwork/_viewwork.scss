@@ -50,11 +50,17 @@
 
       &--image{
 
-        width: 50%;
+        width: 60%;
         height: 75%;
         background-repeat: no-repeat;
         background-size: contain;
         background-position: center;
+
+
+        @include respond-to(not-desktop){
+          width: 95%;
+
+        }
       }
       &--close{
         width: 100px;

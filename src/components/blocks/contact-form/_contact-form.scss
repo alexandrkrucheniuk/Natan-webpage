@@ -9,7 +9,7 @@
 
         &-wrapper {
             padding: 50px;
-            background-color: #fff;
+            background-color: #fcfcfc;
             margin: auto;
 
             @include respond-to(not-desktop){
@@ -41,6 +41,7 @@
             font-weight: 500;
             text-align: left;
             margin: 13px 0;
+            background-color: transparent;
 
             @include respond-to(phone) {
                 width: 100%;
