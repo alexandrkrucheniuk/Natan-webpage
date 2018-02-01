@@ -39,7 +39,7 @@ img {
 
     &_fix {
         max-width: $desktop;
-        padding: 40px 0; 
+        padding: 60px 0; 
         margin: 0 auto;
 
         @include respond-to(not-desktop) {
