@@ -1,8 +1,6 @@
 .portfolio {
     margin-top: 70px;
 
-<<<<<<< HEAD
-=======
     &__wrapper {
         display: flex;
         flex-direction: column;
@@ -17,16 +15,11 @@
         border-top: 1px solid #e8e8e8;
     }
     
->>>>>>> 1775e8993a3ab290cd831db0e04d52b3a767d53d
     &__item {
         background: #eff0f7;
         margin-bottom: 20px;
-<<<<<<< HEAD
         position: relative;
         box-sizing: border-box;
-=======
-        display: block;
->>>>>>> 1775e8993a3ab290cd831db0e04d52b3a767d53d
 
         @include respond-to(phone) {
             width: 100%;
@@ -62,13 +55,9 @@
             }
 
             .portfolio__item-description-wrapper {
-<<<<<<< HEAD
                 @include respond-to(desktop) {
                     height: 436px !important;
                 }
-=======
-                height: 436px !important;
->>>>>>> 1775e8993a3ab290cd831db0e04d52b3a767d53d
             }
 
             .portfolio__item-poster {
@@ -122,15 +111,6 @@
                 }
                 
                 background: #eff0f7;
-<<<<<<< HEAD
-=======
-                justify-content: flex-end;
-
-                @include respond-to(phone) {
-                    width: 100%;
-                    justify-content: center;
-                }
->>>>>>> 1775e8993a3ab290cd831db0e04d52b3a767d53d
             }
 
             .portfolio__item-tile {
@@ -146,7 +126,6 @@
             }
 
             .portfolio__item-description-content {
-<<<<<<< HEAD
                 @include respond-to(desktop) {
                     width: 500px;
                     height: 273px;
@@ -154,13 +133,6 @@
 
                 @include respond-to(phone) {
                     padding: 14px;
-=======
-                width: 500px;
-                height: 273px;
-
-                @include respond-to(phone) {
-                    width: 100%;
->>>>>>> 1775e8993a3ab290cd831db0e04d52b3a767d53d
                 }
             }
 
@@ -176,20 +148,7 @@
                     width: 100%;
                 }
 
-                background: url("../images/baba-blue.png") no-repeat center;
-<<<<<<< HEAD
-=======
-                width: 670px;
-                height: 459px;
-                margin-left:  calc(100% - 670px);
-                bottom: 54px;
-
-                @include respond-to(phone) {
-                    margin-left: 0;
-                    bottom: 0;
-                    width: 100%;
-                }
->>>>>>> 1775e8993a3ab290cd831db0e04d52b3a767d53d
+                background: url("/assets/images/baba-blue.png") no-repeat center;
             }
         }
 
@@ -197,7 +156,6 @@
             display: flex;
             background: transparent;
 
-<<<<<<< HEAD
             @include respond-to(desktop) {
                 height: 827px;
                 width: 600px;
@@ -206,12 +164,12 @@
                 margin-top: -70px;
                 flex-direction: column-reverse;
                 justify-content: flex-end;
-=======
+            }
+
             @include respond-to(phone) {
                 width: 100%;
                 margin-left: 0;
                 transform: none;
->>>>>>> 1775e8993a3ab290cd831db0e04d52b3a767d53d
             }
 
             .portfolio__item-description-wrapper {
@@ -239,7 +197,7 @@
             }
 
             .portfolio__item-poster {
-                background: url("../images/guys.png") no-repeat center;
+                background: url("/assets/images/guys.png") no-repeat center;
 
                 @include respond-to(desktop) {
                     width: 600px;
@@ -291,7 +249,7 @@
             }
 
             .portfolio__item-poster {
-                background: url("../images/baba-red.png") no-repeat center;
+                background: url("/assets/images/baba-red.png") no-repeat center;
             
                 @include respond-to(desktop) {
                     width: 355px;
@@ -342,8 +300,8 @@
             }
 
             .portfolio__item-poster {
-                background: url("../images/baba-green.png") no-repeat center;
-
+                background: url("/assets/images/baba-green.png") no-repeat center;
+                
                 @include respond-to(desktop) {
                     width: 586px;
                     height: 470px;
