@@ -8,6 +8,10 @@
         justify-content: space-between;
     }
 
+    @include respond-to(laptop) {
+        display: block;
+    }
+
     &__wrapper {
         display: flex;
         flex-direction: column;
@@ -46,6 +50,13 @@
             margin-bottom: 20px;
         }
 
+        @include respond-to(laptop) {
+            width: 400px;
+            display: block;
+            height: 436px;
+            margin-bottom: 20px;
+        }
+
         &:hover {
             .portfolio__item-poster::before {
                 height: 100%;
@@ -61,6 +72,10 @@
                 transform: translateY(90px) !important;
             }
 
+            @include respond-to(laptop) {
+                transform: translateY(90px) !important;
+            }
+
             @include respond-to(not-desktop) {
                 display: flex;
             }
@@ -69,10 +84,18 @@
                 @include respond-to(desktop) {
                     height: 436px !important;
                 }
+
+                @include respond-to(laptop) {
+                    height: 436px !important;
+                }
             }
 
             .portfolio__item-poster {
                 @include respond-to(desktop) {
+                    top: -75px !important;
+                }
+
+                @include respond-to(laptop) {
                     top: -75px !important;
                 }
             }
@@ -82,39 +105,59 @@
             @include respond-to(desktop) {
                 margin-top: -60px !important;
             }
+
+            @include respond-to(laptop) {
+                margin-top: -60px !important;
+            }
             
         }
 
         &:nth-child(4n - 3) {
+            position: relative;
+            z-index: 0;
+            margin-bottom: 20px;
+            background-color: transparent;
+
             @include respond-to(desktop) {
                 width: calc(50% - 85px + 570px);
                 transform: translateY(-70px);
                 height: calc(459px + 53px + 72px);
             }
-            
-            position: relative;
-            z-index: 0;
-            margin-bottom: 20px;
-            background-color: transparent;
+
+            @include respond-to(laptop) {
+                width: calc(50% - 85px + 570px);
+                transform: translateY(-70px);
+                height: calc(459px + 53px + 72px);
+            }
 
             @include respond-to(not-desktop) {
                 width: 100%;
                 transform: none;
             }
 
-            .portfolio__item-description-wrapper {
-                @include respond-to(desktop) {
-                   width: calc(100% - 570px);
-                   height: calc(459px + 53px + 72px);
-                   justify-content: flex-end;
-                }
-                
+            .portfolio__item-description-wrapper {                
                 background: #eff0f7;
+
+                @include respond-to(desktop) {
+                    width: calc(100% - 570px);
+                    height: calc(459px + 53px + 72px);
+                    justify-content: flex-end;
+                }
+
+                @include respond-to(laptop) {
+                    width: calc(100% - 570px);
+                    height: calc(459px + 53px + 72px);
+                    justify-content: flex-end;
+                }
             }
 
             .portfolio__item-tile {
                 @include respond-to(desktop) {
                    max-width: 300px;
+                }
+
+                @include respond-to(laptop) {
+                    max-width: 300px;
                 }
             }
 
@@ -122,10 +165,19 @@
                 @include respond-to(desktop) {
                    max-width: 300px;
                 }
+
+                @include respond-to(laptop) {
+                    max-width: 300px;
+                }
             }
 
             .portfolio__item-description-content {
                 @include respond-to(desktop) {
+                    width: 500px;
+                    height: 273px;
+                }
+
+                @include respond-to(laptop) {
                     width: 500px;
                     height: 273px;
                 }
@@ -137,7 +189,16 @@
                     height: 459px;
                     margin-left:  calc(100% - 670px);
                     bottom: 54px;
-                    position: absolute;                }
+                    position: absolute;
+                }
+
+                @include respond-to(laptop) {
+                    width: 670px;
+                    height: 459px;
+                    margin-left:  calc(100% - 670px);
+                    bottom: 54px;
+                    position: absolute;
+                }
 
                 @include respond-to(not-desktop) {
                     width: 100%;
@@ -162,6 +223,16 @@
                 justify-content: flex-end;
             }
 
+            @include respond-to(laptop) {
+                height: 827px;
+                width: 600px;
+                margin-left: 50%;
+                transform: translateX(calc(-100% - 85px)) translateY(0);
+                margin-top: -70px;
+                flex-direction: column-reverse;
+                justify-content: flex-end;
+            }
+
             @include respond-to(not-desktop) {
                 width: 100%;
                 margin-left: 0;
@@ -176,6 +247,12 @@
                     width: 500px;
                     height: 368px;
                 }
+
+                @include respond-to(laptop) {
+                    align-self: flex-end;
+                    width: 500px;
+                    height: 368px;
+                }
             }
 
             .portfolio__item-description {
@@ -186,6 +263,10 @@
                 @include respond-to(desktop) {
                     height: 273px;
                 }
+
+                @include respond-to(laptop) {
+                    height: 273px;
+                }
             }
 
             .portfolio__item-poster {
@@ -193,6 +274,11 @@
                 background-size: cover;
 
                 @include respond-to(desktop) {
+                    width: 600px;
+                    height: 459px;
+                }
+
+                @include respond-to(laptop) {
                     width: 600px;
                     height: 459px;
                 }
@@ -216,7 +302,16 @@
                 margin-top: calc(-827px - 74px);
                 flex-direction: row-reverse;
                 justify-content: flex-end;
-            } 
+            }
+
+            @include respond-to(laptop) {
+                height: 460px;
+                width: 855px;
+                margin-left: calc(50% - 65px);
+                margin-top: calc(-827px - 74px);
+                flex-direction: row-reverse;
+                justify-content: flex-end;
+            }
 
             @include respond-to(not-desktop) {
                 width: 100%;
@@ -231,12 +326,21 @@
                     display: flex;
                     align-items: flex-end;
                 }
+
+                @include respond-to(laptop) {
+                    display: flex;
+                    align-items: flex-end;
+                }
             }
 
             .portfolio__item-description-content {
                 @include respond-to(desktop) {
                     height: 297px;
-                }   
+                }
+
+                @include respond-to(laptop) {
+                    height: 297px;
+                }
             }
 
             .portfolio__item-poster {
@@ -248,6 +352,11 @@
                     height: 460px;
                 }
 
+                @include respond-to(laptop) {
+                    width: 355px;
+                    height: 460px;
+                }
+
                 @include respond-to(not-desktop) {
                     width: 100%;
                 }
@@ -255,18 +364,6 @@
         }
 
         &:nth-child(4n) {
-            @include respond-to(desktop) {
-                height: 470px;
-                width: 935px;
-                margin-left: calc(50% - 65px);
-                display: flex;
-                justify-content: space-between;
-            }
-
-            @include respond-to(not-desktop) {
-                width: 100%;
-            }
-            
             background: #eff0f7;
             position: relative;
             z-index: 1;
@@ -278,8 +375,28 @@
                 flex-direction: column-reverse;
             }
 
+            @include respond-to(laptop) {
+                height: 470px;
+                width: 935px;
+                margin-left: calc(50% - 65px);
+                display: flex;
+                justify-content: space-between;
+            }
+
+            @include respond-to(desktop) {
+                height: 470px;
+                width: 935px;
+                margin-left: calc(50% - 65px);
+                display: flex;
+                justify-content: space-between;
+            }
+
             .portfolio__item-description-content {
                 @include respond-to(desktop) {
+                    height: 307px;
+                }
+
+                @include respond-to(laptop) {
                     height: 307px;
                 }
             }
@@ -287,14 +404,19 @@
             .portfolio__item-poster {
                 background: url("/assets/images/baba-green.png") no-repeat center;
                 background-size: cover;
+
+                @include respond-to(not-desktop) {
+                    width: 100%;
+                }
                 
-                @include respond-to(desktop) {
+                @include respond-to(laptop) {
                     width: 586px;
                     height: 470px;
                 }
 
-                @include respond-to(not-desktop) {
-                    width: 100%;
+                @include respond-to(desktop) {
+                    width: 586px;
+                    height: 470px;
                 }
             }
         }
@@ -311,8 +433,8 @@
                 align-items: flex-end;
 
                 @include respond-to(not-desktop) {
-                        display: flex;
-                        align-items: center;
+                    display: flex;
+                    align-items: center;
                 }
             }
 
@@ -323,11 +445,11 @@
                 @include respond-to(not-desktop) {
                     width: 100%;
                     padding: 14px;
+                }
 
-                    @include respond-to(tablet) {
-                        // padding-top: 0;
-                        width: 100%;
-                    }
+                @include respond-to(laptop) {
+                    width: 320px;
+                    padding-left: 20px;
                 }
 
                 @include respond-to(desktop) {
@@ -369,6 +491,12 @@
             line-height: 22px;
 
             @include respond-to(desktop) {
+                width: 120px;
+                margin-bottom: 24px;
+                padding-left: 20px;
+            }
+
+            @include respond-to(laptop) {
                 width: 120px;
                 margin-bottom: 24px;
                 padding-left: 20px;
