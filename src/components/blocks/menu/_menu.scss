@@ -121,7 +121,7 @@
     &__checkbox {
         display: none;
 
-        &:checked  ~ .menu {
+        &:checked  + .menu {
             transform: translateX(0);
         }
     }
