@@ -30,7 +30,7 @@ img {
     flex-direction: column;
     justify-content: space-between;
     align-items: stretch;
-    height: 100%;
+    min-height: 100%;
     align-content: stretch;
     padding: $gutter*3 $gutter*3.5;
 
