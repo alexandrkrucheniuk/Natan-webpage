@@ -29,6 +29,21 @@
         @include respond-to(not-desktop) {
             display: none;
         }
+
+        li {
+            &:nth-child(4),
+            &:nth-child(5),
+            &:nth-child(6) {
+                display: block;
+            }
+
+            &:nth-child(1),
+            &:nth-child(2),
+            &:nth-child(3) {
+                display: none;
+            }
+        }
+    
     }
 
     li {
