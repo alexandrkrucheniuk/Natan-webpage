@@ -110,7 +110,7 @@
                     Natan`s paintings are exhibited and sold at prime galleries all <br>
                     over the world, and they are part of numerous private art collections.
                 </h3>
-                <a class="bio__commission-link" href="">Commission Me</a>
+                <a class="bio__commission-link" href="http://vintest.xyz/commission">Commission Me</a>
             </div>
         </div>
 
