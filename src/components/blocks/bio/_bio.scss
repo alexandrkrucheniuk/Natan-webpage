@@ -82,7 +82,7 @@
 
     &__intro {
         &-poster {
-            background: url("/images/bio-intro.png") no-repeat center;
+            background: url("/assets/images/bio-intro.png") no-repeat center;
             width: 470px;
             height: 502px;
 
@@ -106,7 +106,7 @@
     
     &__second {
         &-poster {
-            background: url("/images/bio-second.png") no-repeat center;
+            background: url("/assets/images/bio-second.png") no-repeat center;
             width: 670px;
             height: 502px;
 
@@ -177,7 +177,7 @@
             left: 0;
             width: 178px;
             height: 165px;
-            background: url("/images/bio-quote.png") no-repeat center;
+            background: url("/assets/images/bio-quote.png") no-repeat center;
 
             @include respond-to(phone) {
                 top: -129px;
@@ -192,7 +192,7 @@
         }
 
         &-poster {
-            background: url("/images/bio-fourth.png") no-repeat center;
+            background: url("/assets/images/bio-fourth.png") no-repeat center;
             width: 670px;
             height: 502px;
             margin-left: 15px;
@@ -231,7 +231,7 @@
         }
 
         &-poster {
-            background: url("/images/bio-fifth.png") no-repeat center;
+            background: url("/assets/images/bio-fifth.png") no-repeat center;
             width: 670px;
             height: 502px;
 
