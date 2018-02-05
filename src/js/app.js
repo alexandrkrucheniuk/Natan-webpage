@@ -1,7 +1,7 @@
 function portfolioTemplateFix() {
     var portfolioItemsCounter = document.getElementsByClassName("portfolio__item").length,
         footer = document.getElementsByClassName("portfolio__divider")[1],
-        tabletWidth = 768;
+        tabletWidth = 1149;
 
     if (portfolioItemsCounter % 4 == 3 && window.innerWidth >= tabletWidth) {
         footer.style.marginTop = "550px";
