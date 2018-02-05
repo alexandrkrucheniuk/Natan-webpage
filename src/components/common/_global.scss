@@ -67,15 +67,3 @@ img {
 
     }
 }
-
-.show {
-    &-not {
-        &_desktop {
-            display: none;
-
-            @include respond-to(not-desktop) {
-                display: block;
-            }
-        }
-    }
-}
