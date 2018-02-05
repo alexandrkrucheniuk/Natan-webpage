@@ -10,7 +10,6 @@
 
   &-left {
     width: 49%;
-    min-height: 500px;
     background-image: url("../images/viewWork_sampleImage.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -20,6 +19,8 @@
 
     @include respond-to(not-desktop){
       width: 100%;
+      margin-bottom: 75px;
+      min-height: 500px;
     }
 
 
@@ -108,7 +109,6 @@
       flex-direction: column;
       padding: $gutter;
       z-index: 1;
-      height: 40%;
       max-width: 70%;
       word-wrap: break-word;
       word-break: normal;
@@ -139,7 +139,7 @@
 
 
     @include respond-to(not-desktop){
-      width: 100%;
+      min-width: 100%;
     }
 
   }
