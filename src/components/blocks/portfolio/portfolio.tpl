@@ -15,22 +15,12 @@
 
     <div class="portfolio__divider"></div>
     <div class="portfolio">
-        [[!getResources? &parents=`[[*id]]` &tpl=`portfolio-item` ]]
+        [[!getResources? &parents=`[[*id]]` &tpl=`portfolio-item` &processTV=`1` &field=`view-work_image` ]]
     </div>
     <div class="portfolio__divider" style="margin-top: 100px"></div>
 
     <div class="container_fix">
         [[$footer]]
     </div>
-
-    <script>
-        var portfolioItemsCounter = document.getElementsByClassName("portfolio__item").length,
-        footer = document.getElementsByClassName("portfolio__divider")[1],
-        tabletWidth = 768;
-
-        if (portfolioItemsCounter % 4 == 3 && window.innerWidth >= tabletWidth) {
-            footer.style.marginTop = "550px";
-        }
-    </script>
 </body>
 </html>
