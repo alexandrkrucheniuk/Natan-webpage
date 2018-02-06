@@ -9,6 +9,7 @@
     }
 
     @include respond-to(laptop) {
+        padding: 0;
         display: block;
     }
 
@@ -99,7 +100,6 @@
             @include respond-to(laptop) {
                 margin-top: -60px !important;
             }
-            
         }
 
         &:nth-child(4n - 3) {
@@ -118,6 +118,8 @@
                 width: calc(50% - 85px + 570px);
                 transform: translateY(-70px);
                 height: calc(459px + 53px + 72px);
+                display: flex;
+                justify-content: flex-end;
             }
 
             @include respond-to(not-desktop) {
@@ -128,26 +130,27 @@
             .portfolio__item-description-wrapper {                
                 background: #eff0f7;
 
+                @include respond-to(laptop) {
+                    width: 570px;
+                    transform: translateX(-570px);
+                    height: calc(459px + 53px + 72px);
+                    justify-content: flex-end;
+                }
+                
                 @include respond-to(desktop) {
                     width: calc(100% - 570px);
                     height: calc(459px + 53px + 72px);
                     justify-content: flex-end;
-                }
-
-                @include respond-to(laptop) {
-                    width: calc(100% - 570px);
-                    height: calc(459px + 53px + 72px);
-                    justify-content: flex-end;
-                }
+                }                
             }
 
             .portfolio__item-tile {
-                @include respond-to(desktop) {
-                   max-width: 300px;
-                }
-
                 @include respond-to(laptop) {
                     max-width: 300px;
+                }
+
+                @include respond-to(desktop) {
+                   max-width: 300px;
                 }
             }
 
@@ -174,18 +177,18 @@
             }
 
             .portfolio__item-poster {
-                @include respond-to(desktop) {
-                    width: 670px;
-                    height: 459px;
-                    margin-left:  calc(100% - 670px);
-                    bottom: 54px;
-                    position: absolute;
-                }
+                background-image: url("/assets/images/baba-blue.png");
 
                 @include respond-to(laptop) {
                     width: 670px;
                     height: 459px;
-                    margin-left:  calc(100% - 670px);
+                    bottom: 54px;
+                    position: absolute;
+                }
+
+                @include respond-to(desktop) {
+                    width: 670px;
+                    height: 459px;
                     bottom: 54px;
                     position: absolute;
                 }
@@ -193,9 +196,6 @@
                 @include respond-to(not-desktop) {
                     width: 100%;
                 }
-
-                background: url("/assets/images/baba-blue.png") no-repeat center;
-                background-size: cover;
             }
         }
 
@@ -203,7 +203,7 @@
             display: flex;
             background: transparent;
 
-            @include respond-to(desktop) {
+            @include respond-to(laptop) {
                 height: 827px;
                 width: 600px;
                 margin-left: 50%;
@@ -213,7 +213,7 @@
                 justify-content: flex-end;
             }
 
-            @include respond-to(laptop) {
+            @include respond-to(desktop) {
                 height: 827px;
                 width: 600px;
                 margin-left: 50%;
@@ -232,13 +232,13 @@
             .portfolio__item-description-wrapper {
                 background: #eff0f7;
 
-                @include respond-to(desktop) {
+                @include respond-to(laptop) {
                     align-self: flex-end;
                     width: 500px;
                     height: 368px;
                 }
 
-                @include respond-to(laptop) {
+                @include respond-to(desktop) {
                     align-self: flex-end;
                     width: 500px;
                     height: 368px;
@@ -250,25 +250,24 @@
             }
 
             .portfolio__item-description-content {
-                @include respond-to(desktop) {
+                @include respond-to(laptop) {
                     height: 273px;
                 }
 
-                @include respond-to(laptop) {
+                @include respond-to(desktop) {
                     height: 273px;
                 }
             }
 
             .portfolio__item-poster {
-                background: url("/assets/images/guys.png") no-repeat center;
-                background-size: cover;
+                background-image: url("/assets/images/guys.png");
 
-                @include respond-to(desktop) {
+                @include respond-to(laptop) {
                     width: 600px;
                     height: 459px;
                 }
 
-                @include respond-to(laptop) {
+                @include respond-to(desktop) {
                     width: 600px;
                     height: 459px;
                 }
@@ -276,7 +275,6 @@
                 @include respond-to(not-desktop) {
                     width: 100%;
                 }
-                
             }
         }
 
@@ -285,16 +283,16 @@
             z-index: 1;
             display: flex;
             
-            @include respond-to(desktop) {
+            @include respond-to(laptop) {
                 height: 460px;
-                width: 855px;
+                width: 718px;
                 margin-left: calc(50% - 65px);
                 margin-top: calc(-827px - 74px);
                 flex-direction: row-reverse;
                 justify-content: flex-end;
             }
 
-            @include respond-to(laptop) {
+            @include respond-to(desktop) {
                 height: 460px;
                 width: 855px;
                 margin-left: calc(50% - 65px);
@@ -312,37 +310,36 @@
             }
 
             .portfolio__item-description-wrapper {
-                @include respond-to(desktop) {
+                @include respond-to(laptop) {
                     display: flex;
                     align-items: flex-end;
                 }
 
-                @include respond-to(laptop) {
+                @include respond-to(desktop) {
                     display: flex;
                     align-items: flex-end;
                 }
             }
 
             .portfolio__item-description-content {
-                @include respond-to(desktop) {
+                @include respond-to(laptop) {
                     height: 297px;
                 }
 
-                @include respond-to(laptop) {
+                @include respond-to(desktop) {
                     height: 297px;
                 }
             }
 
             .portfolio__item-poster {
-                background: url("/assets/images/baba-red.png") no-repeat center;
-                background-size: cover;
+                background-image: url("/assets/images/baba-red.png");
             
-                @include respond-to(desktop) {
+                @include respond-to(laptop) {
                     width: 355px;
                     height: 460px;
                 }
 
-                @include respond-to(laptop) {
+                @include respond-to(desktop) {
                     width: 355px;
                     height: 460px;
                 }
@@ -367,7 +364,7 @@
 
             @include respond-to(laptop) {
                 height: 470px;
-                width: 935px;
+                width: calc(50% + 65px);
                 margin-left: calc(50% - 65px);
                 display: flex;
                 justify-content: space-between;
@@ -382,26 +379,26 @@
             }
 
             .portfolio__item-description-content {
-                @include respond-to(desktop) {
+                @include respond-to(laptop) {
                     height: 307px;
+                    width: 200px;
                 }
 
-                @include respond-to(laptop) {
+                @include respond-to(desktop) {
                     height: 307px;
                 }
             }
 
             .portfolio__item-poster {
-                background: url("/assets/images/baba-green.png") no-repeat center;
-                background-size: cover;
+                background-image: url("/assets/images/baba-green.png");
 
-                @include respond-to(not-desktop) {
-                    width: 100%;
+                @include respond-to(laptop) {
+                    width: calc(100% - 260px);
+                    height: 470px;
                 }
                 
-                @include respond-to(laptop) {
-                    width: 586px;
-                    height: 470px;
+                @include respond-to(not-desktop) {
+                    width: 100%;
                 }
 
                 @include respond-to(desktop) {
@@ -480,13 +477,13 @@
             font-weight: 700;
             line-height: 22px;
 
-            @include respond-to(desktop) {
+            @include respond-to(laptop) {
                 width: 120px;
                 margin-bottom: 24px;
                 padding-left: 20px;
             }
 
-            @include respond-to(laptop) {
+            @include respond-to(desktop) {
                 width: 120px;
                 margin-bottom: 24px;
                 padding-left: 20px;
@@ -503,6 +500,11 @@
         }
 
         &-poster {
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: #eff0f7;
+
             @include respond-to(not-desktop) {
                 width: 100%;
                 height: 459px;
