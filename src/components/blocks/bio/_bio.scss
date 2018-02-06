@@ -193,14 +193,22 @@
 
         &-poster {
             background: url("/assets/images/bio-fourth.png") no-repeat center;
-            width: 670px;
             height: 502px;
-            margin-left: 15px;
 
             @include respond-to(phone) {
                 margin-left: -15px;
                 margin-right: -15px;
                 width: calc(100% + 30px);
+            }
+
+            @include respond-to(laptop) {
+                max-width: 660px;
+                margin-left: 0;
+            }
+
+            @include respond-to(desktop) {
+                width: 670px;
+                margin-left: 15px;
             }
         }
 
@@ -244,22 +252,36 @@
 
         .bio__item_right {
             margin-top: 20px;
-            padding-left: 60px;
 
             @include respond-to(phone) {
                 padding-left: 0;
+            }
+
+            @include respond-to(laptop) {
+                padding-left: 0;
+            }
+
+            @include respond-to(desktop) {
+                padding-left: 60px;
             }
 
             .bio__item-text {
                 &:last-child {
                     width: 380px;
                     margin-top: 90px;
-                    margin-left: 293px;
-
+                    
                     @include respond-to(phone) {
                         margin-left: 0;
                         margin-top: 40px;
                         width: 100%;
+                    }
+
+                    @include respond-to(laptop) {
+                        margin-left: 250px;
+                    }
+
+                    @include respond-to(desktop) {
+                        margin-left: 293px;
                     }
                 }
             }
