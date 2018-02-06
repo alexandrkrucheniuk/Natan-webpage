@@ -1,0 +1,156 @@
+.menu {
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    @include respond-to(not-desktop) {
+        background: rgba($color: #000, $alpha: .93);
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transform: translateX(-100%);
+        transition: transform .3s ease-in-out;
+        text-align: center;
+        box-sizing: border-box;
+        z-index: 999;
+    }
+
+    &:last-child {
+        text-align: right;
+
+        @include respond-to(not-desktop) {
+            display: none;
+        }
+
+        li {
+            &:nth-child(4),
+            &:nth-child(5),
+            &:nth-child(6) {
+                display: block;
+            }
+
+            &:nth-child(1),
+            &:nth-child(2),
+            &:nth-child(3) {
+                display: none;
+            }
+        }
+    
+    }
+
+    li {
+        &:nth-child(4),
+        &:nth-child(5),
+        &:nth-child(6) {
+            display: none;
+
+            @include respond-to(not-desktop) {
+                display: block;
+            }
+        }
+
+        &:not(:last-child) {
+            padding-right: 20px;
+
+            @include respond-to(not-desktop) {
+                padding-right: 0;    
+            }
+        }
+
+        a {
+            text-decoration: none;
+            font-family: $font-family-roboto;
+            color: #000;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 1.55;
+    
+            @include respond-to(not-desktop) {
+                color: #fff;
+                padding: $gutter / 4 0;
+                line-height: 50px;
+                font-family: $font-family-roboto;
+                font-weight: 500;
+            }
+        }
+    } 
+    
+
+    &__burger {
+        width: 50px;
+        height: 50px;
+        margin-right: 20px;
+        border: 1px solid #e8e8e8;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        &-stripe {
+            display: block;
+            background-color: #343434;
+            width: 30px;
+            height: 2px;
+
+            &:not(:last-child) {
+                margin-bottom: 3px;
+            }
+        }
+
+        &-label {
+            @include respond-to(laptop) {
+                display: none;
+            }
+
+            @include respond-to(desktop) {
+                display: none;
+            }
+        }
+    }
+
+    &__checkbox {
+        display: none;
+
+        &:checked  + .menu {
+            transform: translateX(0);
+        }
+    }
+
+    &__close-button {
+        position: absolute;
+        top: 15px;
+        left: 50%;
+        transform: translateX(-50%);        
+        font-family: $font-family-roboto;
+        color: #fff;
+        font-size: 50px;
+        font-weight: 100;
+        line-height: 50px;
+        cursor: pointer;
+
+        @include respond-to(phone) {
+            @media (orientation: landscape) {
+                left: 30px;
+                top: -30px;
+            }
+        }
+
+        @include respond-to(laptop) {
+            display: none;
+        }
+
+        @include respond-to(desktop) {
+            display: none;
+        }
+    }
+}

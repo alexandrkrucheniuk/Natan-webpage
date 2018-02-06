@@ -11,13 +11,18 @@
     <title>Natan Elkanovich</title>
 </head>
 <body>
-<div class="container">
-    //= components/blocks/header/header.html
+    <div class="container_fix">
+        //= components/blocks/header/header.html
+    </div>
 
+    //= components/blocks/portfolio/portfolio.html
 
-    //= components/blocks/home/home.html
-    //= components/blocks/footer/footer.html
-</div>
-<script src="/assets/js/app.js"></script>
+    <div class="container_fix">
+        //= components/blocks/footer/footer.html
+    </div>
+    <script src="/assets/js/app.js"></script>
+    <script>
+        portfolioTemplateFix();
+    </script>
 </body>
 </html>

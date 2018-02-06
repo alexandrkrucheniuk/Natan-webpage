@@ -1,7 +1,14 @@
 .footer {
-  padding: $gutter*3 0 0;
+  margin-top: $gutter*2;
+  padding: 0 0 $gutter*0.5;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+
+  .container_fix & {
+    margin-top: 0;
+  }
+  
   &-left {
     &__followme {
       color: #343434;
@@ -10,9 +17,12 @@
     }
     &-social {
       margin-top: $gutter;
-
       font-size: 14px;
       font-weight: 700;
+
+      @include respond-to(not-desktop){
+        margin-top: $gutter/2;
+      }
 
       a {
         text-decoration: none;
@@ -45,6 +55,11 @@
     color: #000000;
     font-size: 14px;
     font-weight: 700;
+    text-decoration: none;
 
+
+    @include respond-to(not-desktop){
+      align-items: flex-end;
+    }
   }
 }

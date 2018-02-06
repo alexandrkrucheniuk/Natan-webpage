@@ -1,0 +1,40 @@
+.home {
+  position: relative;
+  overflow: hidden;
+  margin-top: $gutter*2;
+
+  height: 75vh;
+
+  &__video {
+    min-width: 100vw;
+    min-height: 100vh;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+
+    @include respond-to(phone){
+      display: none;
+    }
+
+  }
+
+  &__mobile-bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100vw;
+    min-height: 100vh;
+    width: auto;
+    height: auto;
+    display: none;
+    background: url("../images/home-bg.png") center;
+
+    @include respond-to(phone){
+      display: block;
+    }
+  }
+}

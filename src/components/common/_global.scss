@@ -7,9 +7,10 @@ body {
 }
 
 body {
+    margin: 0;
     color: black;
-    background: white;
-    font:16px $font-family-primary;
+    background: #fcfcfc;
+    font: 16px $font-family-roboto;
 
     @include respond-to(phone) {
         font-size: 14px;
@@ -29,17 +30,34 @@ img {
     flex-direction: column;
     justify-content: space-between;
     align-items: stretch;
+    min-height: 100%;
     align-content: stretch;
 
-    padding: $gutter*3 $gutter*3.5;
     @include respond-to(not-desktop) {
-        padding: 0 $gutter/2;
+        padding: 40px 15px 45px;
+    }
+
+    @include respond-to(laptop) {
+        padding: 40px 15px 45px;
+    }
+
+    &_fix {
+        max-width: $desktop;
+        padding: 60px 0; 
+        margin: 0 auto;
+
+        @include respond-to(not-desktop) {
+            padding: 40px 15px 45px;
+        }
+        
+        @include respond-to(laptop) {
+            padding: 40px 15px 45px;
+        }
     }
 }
 
 .content {
     &__container {
-
         padding: 25px;
         box-shadow: 0 0 5px 1px rgba(37, 37, 37, 0.05);
         background-color: white;

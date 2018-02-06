@@ -17,9 +17,9 @@ var path = {
     },
     build: {
         html: 'app/',
-        js: 'app/js/',
-        css: 'app/css/',
-        img: 'app/images/'
+        js: 'app/assets/js/',
+        css: 'app/assets/css/',
+        img: 'app/assets/images/',
     },
     watch: {
         html: 'src/**/*.html',
