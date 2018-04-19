@@ -42,6 +42,7 @@
             text-align: left;
             margin: 13px 0;
             background-color: transparent;
+            box-shadow: none;
 
             @include respond-to(phone) {
                 width: 100%;
@@ -61,6 +62,7 @@
         }
 
         label {
+            display: block;
             transition: all .2s;
             position: absolute;
             top: 24px;

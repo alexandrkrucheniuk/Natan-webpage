@@ -1,0 +1,84 @@
+.press-inner {
+    &__cover {
+        width: 100%;
+        height: 585px;
+        background: url("/assets/images/press-inner-cover.png") no-repeat center;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+    }
+
+    &__container {
+        max-width: 870px;
+        margin: 0 auto;
+    }
+
+    &__title {
+        color: #fff;
+        font-size: 60px;
+        font-weight: 900;
+        line-height: 80px;
+        text-align: center;
+        text-transform: capitalize;
+        padding: 0 25px;
+    }
+
+    &__content {
+        line-height: 1.3;
+
+        p {
+            background: #fff;
+        }
+
+        & p:first-child {
+            background: url("/assets/images/press-inner-cover.png") no-repeat left;
+            background-color: #000;
+            // background-size: 100px 130px;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+            // &:not(::first-letter) {
+            //     -webkit-text-fill-color: yellow;
+            // }
+            
+            &::first-letter {
+                display: block;
+                content: "";
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                
+                font-size: 211px;
+                // color: red;
+                font-weight: bold;
+                padding-right: 15px;
+                float: left;
+                line-height: 1;   
+            }
+
+            &:before,
+            &:after {
+                position: absolute;
+                content: '';
+            }
+
+            &:before {
+                z-index: -2;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-image: inherit;
+            }
+
+            &:after {
+                position: absolute;
+                z-index: -1;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-color: #fcfcfc;
+            }
+        }
+    }
+}
