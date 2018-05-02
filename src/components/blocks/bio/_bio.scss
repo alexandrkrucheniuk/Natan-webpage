@@ -124,6 +124,27 @@
         }
     }
 
+    &__gadot {
+        &-poster {
+            background: url("/assets/images/Me_&_Gal.jpg") no-repeat center;
+            width: 480px;
+            height: 502px;
+            margin-left: 115px;
+    
+            @include respond-to(phone) {
+                // display: none;
+            }
+        }
+
+        .bio__item_left {
+            padding-top: 170px;
+
+            @include respond-to(not-desktop) {
+                padding-top: 60px;
+            }
+        }
+    }
+
     &__third {
         margin-bottom: 0;
 
