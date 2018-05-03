@@ -6,11 +6,26 @@
         background-size: cover;
         display: flex;
         align-items: center;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            display: block;
+            content: '';
+            width: 100%;
+            height: 100%;
+            background-color: rgba($color: #000, $alpha: .45);
+        }
+
+        & > * {
+            position: relative;
+            z-index: 2;
+        }
     }
 
     &__container {
         max-width: 870px;
-        margin: 0 auto;
+        margin: 0 auto 30px;
     }
 
     &__title {
@@ -21,63 +36,78 @@
         text-align: center;
         text-transform: capitalize;
         padding: 0 25px;
+
+        @include respond-to(phone) {
+            font-size: 45px;
+        }
+    }
+
+    &__header {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        color: #343434;
+        margin-bottom: 50px;
+        font-weight: 500;
+
+        @include respond-to(phone) {
+            flex-direction: column;
+        }
+
+        &-title {
+            font-size: 30px;
+            max-width: 300px;
+            padding-right: 15px;
+            font-weight: 400;
+        }
+
+        &-description {
+            width: 100%;
+            max-width: 470px;
+            line-height: 2;
+
+            @include respond-to(phone) {
+                margin-top: 20px;
+            }
+        }
     }
 
     &__content {
-        line-height: 1.3;
-
-        p {
-            background: #fff;
-        }
+        line-height: 2;
+        color: #343434;
+        font-weight: 500;
 
         & p:first-child {
-            background: url("/assets/images/press-inner-cover.png") no-repeat left;
-            background-color: #000;
-            // background-size: 100px 130px;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-
-            // &:not(::first-letter) {
-            //     -webkit-text-fill-color: yellow;
-            // }
-            
             &::first-letter {
                 display: block;
                 content: "";
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
                 
-                font-size: 211px;
-                // color: red;
+                font-size: 150px;
                 font-weight: bold;
-                padding-right: 15px;
+                padding-right: 20px;
                 float: left;
-                line-height: 1;   
+                line-height: 0.8;
             }
+        }
 
-            &:before,
-            &:after {
-                position: absolute;
-                content: '';
-            }
+        img {
+            width: 100%;
+            max-width: 870px;
+            // height: 360px;
+            padding: 30px 0;
+        }
+    }
 
-            &:before {
-                z-index: -2;
-                top: 0;
-                right: 0;
-                bottom: 0;
-                left: 0;
-                background-image: inherit;
-            }
+    &__social {
+        &-item {
+            display: flex;
+            height: 30px;
+            padding: 0 15px;
+            border-radius: 30px;
 
-            &:after {
-                position: absolute;
-                z-index: -1;
-                top: 0;
-                right: 0;
-                bottom: 0;
-                left: 0;
-                background-color: #fcfcfc;
+            &_twitter {
+                max-width: 100px;
+                background-color: #00abed;
             }
         }
     }
