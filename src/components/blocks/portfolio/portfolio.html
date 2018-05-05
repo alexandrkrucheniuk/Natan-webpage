@@ -36,20 +36,13 @@
 
 <div class="portfolio">
     <div class="portfolio__column portfolio__column_left"></div>
+    <div class="portfolio__column portfolio__column_center"></div>
     <div class="portfolio__column portfolio__column_right"></div>
 
     <div class="portfolio__item">
         <a href="">
             <div class="portfolio__item-poster">
                 <img src="/assets/images/baba-red.png" alt="">
-            </div>
-        </a>
-        <div class="portfolio__item-title">Lorem ipsum dolor sit amet.</div>
-    </div>
-    <div class="portfolio__item">
-        <a href="">
-            <div class="portfolio__item-poster">
-                <img src="/assets/images/baba-blue.png" alt="">
             </div>
         </a>
         <div class="portfolio__item-title">Lorem ipsum dolor sit amet.</div>
@@ -73,7 +66,7 @@
     <div class="portfolio__item">
         <a href="">
             <div class="portfolio__item-poster">
-                <img src="/assets/images/baba-green.png" alt="">
+                <img src="/assets/images/baba-blue.png" alt="">
             </div>
         </a>
         <div class="portfolio__item-title">Lorem ipsum dolor sit amet.</div>
@@ -97,6 +90,14 @@
     <div class="portfolio__item">
         <a href="">
             <div class="portfolio__item-poster">
+                <img src="/assets/images/baba-green.png" alt="">
+            </div>
+        </a>
+        <div class="portfolio__item-title">Lorem ipsum dolor sit amet.</div>
+    </div>
+    <div class="portfolio__item">
+        <a href="">
+            <div class="portfolio__item-poster">
                 <img src="/assets/images/baba-blue.png" alt="">
             </div>
         </a>
@@ -114,12 +115,14 @@
 </div>
 
 <script>
+    var itemsList = document.querySelectorAll('.portfolio__item');
     window.addEventListener("resize", buildGrid);
+
     function setTitleWidth(itemsList) {
         itemsList.forEach((item) => {
             let image = item.querySelector('img');
             if (window.screen.width > 767) {
-                item.querySelector('.portfolio__item-title').style.width = `${image.width - 100}px`;
+                item.querySelector('.portfolio__item-title').style.width = `${image.width - 40}px`;
             } else {
                 item.querySelector('.portfolio__item-title').style.width = `${image.width}px`;
             }
@@ -127,14 +130,18 @@
     }
 
     function separatingByColumns(itemsList) {
+        var counter = 1;
+
         [...itemsList].forEach((item, index) => {
-            if (index % 2) {
-                document.querySelector(".portfolio__column_right").appendChild(item);
-            } else if (index === 0) {
+            if (counter === 1) {
                 document.querySelector(".portfolio__column_left").appendChild(item);
+            } else if (counter === 2) {
+                document.querySelector(".portfolio__column_center").appendChild(item);
             } else {
-                document.querySelector(".portfolio__column_left").appendChild(item);
+                document.querySelector(".portfolio__column_right").appendChild(item);
             }
+
+            counter < 3 ? counter++ : counter = 1;
         });
     }
 
@@ -145,14 +152,14 @@
     }
 
     function buildGrid() {
-        var itemsList = document.querySelectorAll('.portfolio__item');
-        
+        var tempItemsList = itemsList;
+
         if (window.screen.width > 767) {
-            separatingByColumns(itemsList);
-            setTitleWidth(itemsList);
+            separatingByColumns(tempItemsList);
+            setTitleWidth(tempItemsList);
         } else {
-            joinItems(itemsList);
-            setTitleWidth(itemsList);
+            joinItems(tempItemsList);
+            setTitleWidth(tempItemsList);
         }
 
         setTimeout(() => {
