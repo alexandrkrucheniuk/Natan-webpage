@@ -9,7 +9,7 @@
   }
 
   &-left {
-    width: 49%;
+    width: 34%;
     background-image: url("../images/viewWork_sampleImage.png");
     background-repeat: no-repeat;
     background-size: contain;
@@ -105,11 +105,10 @@
     }
   }
   &-right {
-    width: 49%;
-    max-width: 865px;
+    width: 64%;
+    max-width: 1113px;
     display: flex;
     justify-content: center;
-
 
     @include respond-to(not-desktop){
       min-width: 100%;
